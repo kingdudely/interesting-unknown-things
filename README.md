@@ -27,6 +27,14 @@ lxc remote add canonical-images https://images.lxd.canonical.com --protocol=simp
 lxc launch canonical-images:IMAGE_NAME_HERE CONTAINER_NAME_HERE
 ```
 
+# Native binary/executable to WASM methods
+* Decompile it to a `.c`/`.cpp`/`.bc`/`.ll`/`.o` file and use `Emscripten` to turn it into WASM like so: (don't forget to implement the imports).
+* Lift it to a `.bc`/`.ll` file and use `llc` and `wasm-ld` to turn it into WASM like so:
+```sh
+llc -filetype=obj -mtriple=wasm32-unknown-unknown -march=wasm32 input.exe.bc -o output.o
+wasm-ld file.o -o file.wasm --no-entry --export-all --allow-undefined
+```
+
 # Installation scripts
 * Xpra: http://xpra.org/get-xpra.sh
 * Docker: https://get.docker.com
