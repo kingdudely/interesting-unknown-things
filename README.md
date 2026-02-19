@@ -31,3 +31,4 @@ lxc launch canonical-images:IMAGE_NAME_HERE CONTAINER_NAME_HERE
 * Xpra: http://xpra.org/get-xpra.sh
 * Docker: https://get.docker.com
 * Rev.ng: https://rev.ng/downloads/revng-distributable/master/install.sh
+* LLVM: https://apt.llvm.org/llvm.sh
