@@ -1,20 +1,28 @@
 # Github Codespaces
-`lsblk` shows a 512 gigabyte drive that can be used for extra storage.
-`docker` is logged into account `codespacesdev`.
+* `lsblk` shows a 512 gigabyte drive that can be used for extra storage.
+* Every blank codespace is automatically logged into Docker account `codespacesdev`.
 
-# ChromeOS Crostini
-To change the Linux distribution, open `Crosh` with <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>, run
+# ChromeOS
+* To open `Crosh`, do <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>.
+* To enter terminal mode in `Crosh`, run
 ```sh
 vmc start termina
 ```
-and then copy and paste this script:
+* To use a Linux distribution in `Crosh` terminal mode, find the one you want with
 ```sh
-# lxc stop penguin
-# lxc delete --force penguin
-lxc remote add canonical-images https://images.lxd.canonical.com --protocol=simplestreams
+lxc list
+```
+and then do
+```sh
+lxc exec CONTAINER_NAME_HERE -- /bin/sh
+```
 
-read -p "Which image do you want to use? (e.g., alpine/3.20, ubuntu/latest): " IMAGE
-read -p "What do you want your container name to be?: " NAME
-lxc launch canonical-images:${IMAGE} ${NAME}
-lxc exec ${NAME} -- /bin/sh
+* To install a new Linux distribution in `Crostini`, open `Crosh` terminal mode, and then copy and paste this script:
+<!--
+lxc stop penguin
+lxc delete --force penguin
+-->
+```sh
+lxc remote add canonical-images https://images.lxd.canonical.com --protocol=simplestreams
+lxc launch canonical-images:IMAGE_NAME_HERE CONTAINER_NAME_HERE
 ```
