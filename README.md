@@ -44,3 +44,4 @@ wasm-ld file.o -o file.wasm --no-entry --export-all --allow-undefined
 * Docker: https://get.docker.com
 * Rev.ng: https://rev.ng/downloads/revng-distributable/master/install.sh
 * LLVM: https://apt.llvm.org/llvm.sh
+* RustUp: https://sh.rustup.rs
