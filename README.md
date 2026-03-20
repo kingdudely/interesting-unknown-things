@@ -16,6 +16,10 @@ and then do
 ```sh
 lxc exec CONTAINER_NAME_HERE -- /bin/sh
 ```
+* [How to fix Crostini crashing immediately](https://support.google.com/chromebook/thread/415077886/after-the-latest-update-i-cannot-start-linux-even-after-a-powerwash?hl=en&utm_source=chatgpt.com):
+> When you open terminal try clicking on the 'manage' button, then back.  This works for me, for now. If they do not fix this issue I am concerned even this will not work....then I will have to move from chromebook for my work program! Not what I want. 
+Good luck, hope it works for you
+(I believe my issue started with the version before what you listed)
 
 * To install a new Linux distribution in `Crostini`, open `Crosh` terminal mode, and then copy and paste this script:
 <!--
