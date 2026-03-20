@@ -1,6 +1,7 @@
 # Github Codespaces
 * `lsblk` shows a 512 gigabyte drive that can be used for extra storage.
 * Every blank codespace is automatically logged into Docker account `codespacesdev`.
+* To run Windows in GitHub codespaces, click on [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/dockur/windows?devcontainer_path=.devcontainer%2F210+-+Tiny10%2Fdevcontainer.json&machine=standardLinux32gb)
 
 # ChromeOS
 * To open `Crosh`, do <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>T</kbd>.
