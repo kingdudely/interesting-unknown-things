@@ -1,0 +1,17 @@
+sudo apt update
+sudo apt install cmake python3
+git clone https://github.com/emscripten-core/emsdk.git
+cd emsdk
+./emsdk install latest
+./emsdk activate latest
+source ./emsdk_env.sh    # (or equivalent on Windows)
+git clone https://github.com/elliott-wen/unicorn.wasm.git
+cd unicorn.wasm
+mkdir -p build
+cd build
+
+emcmake cmake .. \
+  -DUNICORN_ARCH="x86_64"
+  -DCMAKE_C_FLAGS="-s ENVIRONMENT='web' -s MODULARIZE=1 -s EXPORT_ES6=1" \
+  -DCMAKE_CXX_FLAGS="-s ENVIRONMENT='web' -s MODULARIZE=1 -s EXPORT_ES6=1"
+emmake make -j$(nproc)
