@@ -11,7 +11,7 @@ mkdir -p build
 cd build
 
 emcmake cmake .. \
-  -DUNICORN_ARCH="x86_64"
+  -DUNICORN_ARCH="x86_64" \
   -DCMAKE_C_FLAGS="-s ENVIRONMENT='web' -s MODULARIZE=1 -s EXPORT_ES6=1" \
   -DCMAKE_CXX_FLAGS="-s ENVIRONMENT='web' -s MODULARIZE=1 -s EXPORT_ES6=1"
 emmake make -j$(nproc)
